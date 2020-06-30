@@ -2,7 +2,7 @@
     font-family: consolas;
     font-size: 20px;
 }
-
+/*
 .container {
 
 }
@@ -18,7 +18,7 @@
 .date {
 
 }
-
+*/
 .weather {
     width: 300px;
     height: auto;
@@ -31,7 +31,7 @@
 .city {
     font-size: 30px;
 }
-
+/*
 .icon {
 
 }
@@ -43,7 +43,7 @@
 .temp {
 
 }
-
+*/
 .main_info {
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,7 @@
 .main_info .description {
     font-size: 30px;
 }
-
+/*
 .cur_temp {
     
 }
@@ -109,3 +109,4 @@
 .background_img {
 
 }
+*/
