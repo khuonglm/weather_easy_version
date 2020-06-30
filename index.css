@@ -1,0 +1,111 @@
+* {
+    font-family: consolas;
+    font-size: 20px;
+}
+
+.container {
+
+}
+
+.lightning {
+
+}
+
+.sun {
+
+}
+
+.date {
+
+}
+
+.weather {
+    width: 300px;
+    height: auto;
+    box-shadow: 5px 5px 5px 2px lightslategrey;
+    background-color: pink;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10%;
+}
+
+.city {
+    font-size: 30px;
+}
+
+.icon {
+
+}
+
+.weather_icon {
+
+}
+
+.temp {
+
+}
+
+.main_info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main_info div span {
+    font-size: 30px;
+}
+
+.main_info .cur_temp {
+    font-size: 30px;
+}
+
+.main_info .description {
+    font-size: 30px;
+}
+
+.cur_temp {
+    
+}
+
+.max_min {
+
+}
+
+.wind {
+
+}
+
+.humidity {
+
+}
+
+.feel {
+
+}
+
+.min {
+
+}
+
+.max {
+
+}
+
+.fog {
+
+}
+
+.rain {
+
+}
+
+.light_rain {
+
+}
+
+.heavy_rain {
+
+}
+
+.background_img {
+
+}
