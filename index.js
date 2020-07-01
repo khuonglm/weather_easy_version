@@ -20,7 +20,7 @@ setInterval(function() {
     type: "GET",
     dataType: "json",
     data: {name: name},
-    url: "http://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=c27e356b263e8f4724fb144ce5645f86&units=metric",
+    url: "https://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=c27e356b263e8f4724fb144ce5645f86&units=metric",
     success: function(data) {
       $(".weather .cur_temp span").html(data.main.temp)
       $(".weather .description").html(data.weather[0].description)
