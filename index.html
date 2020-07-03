@@ -4,40 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Current weather</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat Alternates' rel='stylesheet'>
     <link rel = "stylesheet" href = "index.css">
-    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body background="">
     <div class = "container">
-        <div class = "lightning"></div>
-        <div class = "sun"></div>
         <div class = "date"></div>
         <div class = "weather">
-            <div class = "city">Hà Nội</div>
-            <div class = "icon"><img class = "weather_icon" src = ""></div>
+            <div class = "city"><b>HA NOI</b></div>
             <div class = "temp">
                 <div class = "main_info">
+                    <div class = "icon"></div>
                     <div class = "cur_temp">
-                        <span>Unknown</span>°C 
+                        <div><span>Unknown</span>°C </div>
+                        <div class = "description">Unknown</div>
                     </div>
-                    <div class = "description">Unknown</div>
                 </div>
-                <hr>
-                <div class="max_min">
-                    Humidity: <span class="humidity">unknown</span>%<br/>
-                    Wind: <span class="wind">unknown</span>m/s<br/>
-                    Feels like: <span class="feel">unknown</span>°C<br/>
-                    Temp range: <span class="min"><a>unknown</a>°C</span> - 
-                    <span class="max"><a>unknown</a>°C</span>
+                <div class="more_info">
+                    <div class = "humidity_main">
+                        <img src = "image/water.png"/>
+                        <div>
+                            <span class="humidity">unknown</span>%
+                        </div>
+                    </div>
+                    <div class = "wind_main">
+                        <img src = "image/wind.png"/> 
+                        <div>
+                            <span class = "wind">unknown</span>m/s
+                        </div>
+                    </div>
+                    <div class = "max_min">
+                        <img src = "image/temperature.png"/>
+                        <div>
+                            <span class="min"><a>unknown</a>°C</span> - 
+                            <span class="max"><a>unknown</a>°C</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class = "fog"></div>
-        <div class = "rain">
-            <div class = "light_rain"></div>
-            <div class = "heavy_rain"></div>
+        <div class = "lightning">
+           <!-- <div class = "thunder">⚡</div> -->
         </div>
-        <img class = "background_img" src = "">
+        <div class = "sun">
+            <!--
+            <div class = "sun_icon">☀️</div>
+            <div class = "moon_icon">🌙</div>
+            -->
+        </div>
+        <div class = "fog">
+            
+        </div>
+        <div class = "rain">
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "lightrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+            <div class = "heavyrain">💧</div>
+        </div>
+        <div class = "snow">
+            <!--
+            <div class = "snowflake">❄️</div>
+            -->
+        </div>
+        <div class = "lucky_aurora">
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div>
+            <div class = "clover">🍀</div> 
+        </div>
     </div>
     <script src = "index.js"></script>
 </body>
