@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     height: auto;
+    overflow-x: hidden;
 }
 
 .background_funny .img {
@@ -58,6 +59,79 @@ body {
     width: 40%;
 }
 
+.fog {
+    display: none;
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+    -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+}
+.fog .image01, .fog .image02 {
+    background: url("image/fog.png") repeat-x top left transparent;
+    background-size: 100%;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+  
+@keyframes foglayer_01_opacity {
+    0% {
+        opacity: .1;
+    }
+    22% {
+        opacity: .5;
+    }
+    40% {
+        opacity: .28;
+    }
+    58% {
+        opacity: .4;
+    }
+    80% {
+        opacity: .16;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+@-webkit-keyframes foglayer_01_opacity {
+    0% {
+        opacity: .2;
+    }
+    22% {
+        opacity: .5;
+    }
+    40% {
+        opacity: .28;
+    }
+    58% {
+        opacity: .4;
+    }
+    80% {
+        opacity: .24;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+@keyframes foglayer_moveme {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+@-webkit-keyframes foglayer_moveme {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
 .lightrain {
     display: none;
     position: fixed;
@@ -97,16 +171,17 @@ body {
 }
 
 .heavyrain {
+    display: none;
     position: fixed;
     top: -100px;
 }
 .heavyrain:nth-child(1) {
     left: 5%; 
-    animation: nieve 2s linear 0.5s infinite; 
+    animation: nieve 5s linear 1s infinite; 
 }
 .heavyrain:nth-child(2) {
     left: 13%; 
-    animation: nieve 2s linear 0.3s infinite; 
+    animation: nieve 6s linear 2s infinite; 
 }
 .heavyrain:nth-child(3) {
     left: 26%; 
@@ -133,7 +208,7 @@ body {
     animation: nieve 2s linear 0.3s infinite; 
 }
 
-.clover {
+.clover, .snowflake {
     display: none;
     position: fixed;
     top: -100px;
@@ -143,35 +218,38 @@ body {
     animation-iteration-count: infinite, infinite;
     animation-play-state: running, running;
 }
-.lucky_aurora .clover:nth-child(1) {
+.clover {
+    display: none;
+}
+.lucky_aurora .clover:nth-child(1), .snowflake:nth-child(1) {
     left: 5%;
     animation-delay: 3s, 1s;
 }
-.lucky_aurora .clover:nth-child(2) {
+.lucky_aurora .clover:nth-child(2), .snowflake:nth-child(2) {
     left: 96%;
     animation-delay: 10s, 3s;
 }
-.lucky_aurora .clover:nth-child(3) {
+.lucky_aurora .clover:nth-child(3), .snowflake:nth-child(3) {
     left: 36%;
     animation-delay: 12s, 5s;
 }
-.lucky_aurora .clover:nth-child(4) {
+.lucky_aurora .clover:nth-child(4), .snowflake:nth-child(4) {
     left: 45%;
     animation-delay: 8s, 2s;
 }
-.lucky_aurora .clover:nth-child(5) {
+.lucky_aurora .clover:nth-child(5), .snowflake:nth-child(5) {
     left: 25%;
     animation-delay: 16s, 6s;
 }
-.lucky_aurora .clover:nth-child(6) {
+.lucky_aurora .clover:nth-child(6), .snowflake:nth-child(6) {
     left: 59%;
     animation-delay: 13s, 3s;
 }
-.lucky_aurora .clover:nth-child(7) {
+.lucky_aurora .clover:nth-child(7), .snowflake:nth-child(7) {
     left: 72%;
     animation-delay: 15s, 3s;
 }
-.lucky_aurora .clover:nth-child(8) {
+.lucky_aurora .clover:nth-child(8), .snowflake:nth-child(8) {
     left: 85%;
     animation-delay: 20s, 6s;
 }
