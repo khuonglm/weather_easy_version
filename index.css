@@ -5,7 +5,8 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .background_funny .img {
