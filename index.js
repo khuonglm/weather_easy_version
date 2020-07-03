@@ -239,8 +239,9 @@ setInterval(function() {
   });
   let dt = new Date()
   $(".date").html(dt.toLocaleString())
-  if(dt.getHours() >= 18 || dt.getHours <= 5) {
+  if(dt.getHours() >= 18 || dt.getHours() <= 5) {
     $("body").css("background-image", "url('image/background_4.jpg')")
+    console.log('fuck')
   } else {
     $("body").css("background-image", "url('image/background_2.png')")
   }
