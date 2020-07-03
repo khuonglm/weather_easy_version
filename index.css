@@ -1,112 +1,170 @@
-* {
-    font-family: consolas;
-    font-size: 20px;
-}
-/*
-.container {
-
-}
-
-.lightning {
-
+body {
+    font-family: 'Montserrat Alternates';
+    font-size: 30px;
+    background-image: url('image/background_2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
 }
 
-.sun {
-
+.background_funny .img {
+    width: 50%;
 }
 
 .date {
-
+    color: rgb(204, 102, 0);
 }
-*/
+
 .weather {
-    width: 300px;
+    width: 600px;
     height: auto;
     box-shadow: 5px 5px 5px 2px lightslategrey;
-    background-color: pink;
+    background: rgba(255, 255, 255, 0.3); /*linear-gradient(to bottom, #33ccc2, #aec6cf);*/
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
+    position: absolute;
+    margin-left: 350px;
 }
 
 .city {
     font-size: 30px;
 }
-/*
-.icon {
 
+.icon img {
+    width: 80%;
 }
 
-.weather_icon {
-
-}
-
-.temp {
-
-}
-*/
 .main_info {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.main_info div span {
+    flex-wrap: nowrap;
     font-size: 30px;
 }
 
-.main_info .cur_temp {
-    font-size: 30px;
+.cur_temp span {
+    font-size: 100px;
 }
 
-.main_info .description {
-    font-size: 30px;
-}
-/*
-.cur_temp {
-    
+.more_info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
-.max_min {
-
+.wind_main img, .humidity_main img {
+    width: 30%;
 }
 
-.wind {
-
+.max_min img {
+    width: 40%;
 }
 
-.humidity {
-
+.lightrain {
+    display: none;
+    position: fixed;
+    top: -100px;
+}
+.lightrain:nth-child(1) {
+   left: 5%; 
+   animation: nieve 10s linear 2s infinite; 
+}
+.lightrain:nth-child(2) {
+    left: 13%; 
+    animation: nieve 5s linear 2s infinite; 
+}
+.lightrain:nth-child(3) {
+    left: 26%; 
+    animation: nieve 6s linear 1s infinite; 
+}
+.lightrain:nth-child(4) {
+    left: 45%; 
+    animation: nieve 4s linear 2s infinite; 
+}
+.lightrain:nth-child(5) {
+    left: 57%; 
+    animation: nieve 5s linear 3s infinite; 
+}
+.lightrain:nth-child(6) {
+    left: 65%; 
+    animation: nieve 3s linear 2s infinite; 
+}
+.lightrain:nth-child(7) {
+    left: 79%; 
+    animation: nieve 2s linear 2s infinite; 
+}
+.lightrain:nth-child(8) {
+    left: 93%; 
+    animation: nieve 2s linear 3s infinite; 
 }
 
-.feel {
-
+.heavyrain {
+    position: fixed;
+    top: -100px;
+}
+.heavyrain:nth-child(1) {
+    left: 2%;
+    animation: nieve 0.2s linear 1s infinite;
 }
 
-.min {
-
+.clover {
+    display: none;
+    position: fixed;
+    top: -100px;
+    animation-name: nieve, copos;
+    animation-duration: 10s, 5s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+}
+.lucky_aurora .clover:nth-child(1) {
+    left: 5%;
+    animation-delay: 3s, 1s;
+}
+.lucky_aurora .clover:nth-child(2) {
+    left: 96%;
+    animation-delay: 10s, 3s;
+}
+.lucky_aurora .clover:nth-child(3) {
+    left: 36%;
+    animation-delay: 12s, 5s;
+}
+.lucky_aurora .clover:nth-child(4) {
+    left: 45%;
+    animation-delay: 8s, 2s;
+}
+.lucky_aurora .clover:nth-child(5) {
+    left: 25%;
+    animation-delay: 16s, 6s;
+}
+.lucky_aurora .clover:nth-child(6) {
+    left: 59%;
+    animation-delay: 13s, 3s;
+}
+.lucky_aurora .clover:nth-child(7) {
+    left: 72%;
+    animation-delay: 15s, 3s;
+}
+.lucky_aurora .clover:nth-child(8) {
+    left: 85%;
+    animation-delay: 20s, 6s;
 }
 
-.max {
-
+@keyframes nieve {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 100%;
+    }
 }
 
-.fog {
-
+@keyframes copos {
+    0% { transform: rotate(0deg) translate(0px, 0px);}
+    25% { transform: translateX(50px);}
+    75% { transform: rotate(720deg) translate(0px, 20px);}
 }
 
-.rain {
-
+@keyframes cross {
+    50% {
+        transform: translateX(100px);
+    }
 }
-
-.light_rain {
-
-}
-
-.heavy_rain {
-
-}
-
-.background_img {
-
-}
-*/
