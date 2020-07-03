@@ -135,8 +135,17 @@ function toggle_clover() {
 }
 
 function toggle_fog() {
-  //filter: blur(0px);
-  //-webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  if(sfog) {
+    sfog = 0
+    $(".fog").css("display", "none")
+    $("body").css("filter", "blur(0px)");
+    $("body").css("-webkit-filter", "blur(0px)");
+  } else {
+    sfog = 1
+    $(".fog").css("display", "block")
+    $("body").css("filter", "blur(0px)");
+    $("body").css("-webkit-filter", "blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2)");
+  }
 }
 
 function setIcon(weather) {
