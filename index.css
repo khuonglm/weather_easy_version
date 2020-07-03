@@ -101,8 +101,36 @@ body {
     top: -100px;
 }
 .heavyrain:nth-child(1) {
-    left: 2%;
-    animation: nieve 0.2s linear 1s infinite;
+    left: 5%; 
+    animation: nieve 2s linear 0.5s infinite; 
+}
+.heavyrain:nth-child(2) {
+    left: 13%; 
+    animation: nieve 2s linear 0.3s infinite; 
+}
+.heavyrain:nth-child(3) {
+    left: 26%; 
+    animation: nieve 6s linear 0.5s infinite; 
+}
+.heavyrain:nth-child(4) {
+    left: 45%; 
+    animation: nieve 4s linear 0.4s infinite; 
+}
+.heavyrain:nth-child(5) {
+    left: 57%; 
+    animation: nieve 5s linear 0.4s infinite; 
+}
+.heavyrain:nth-child(6) {
+    left: 65%; 
+    animation: nieve 3s linear 0.4s infinite; 
+}
+.heavyrain:nth-child(7) {
+    left: 79%; 
+    animation: nieve 2s linear 0.4s infinite; 
+}
+.heavyrain:nth-child(8) {
+    left: 93%; 
+    animation: nieve 2s linear 0.3s infinite; 
 }
 
 .clover {
