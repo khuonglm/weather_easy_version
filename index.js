@@ -64,28 +64,79 @@ const weatherMap = new Map([
     [804, 'add_cloud'],
 ])
 
+let sthunder = 0, shrain = 0, slrain = 0
+let ssnow = 0, stornado = 0, sclover = 1, sfog = 0
+
+for(let i = 1; i < 5; ++i) $("#bolt" + i).hide()
+
+function random(x) {
+  return Math.round(Math.random() * x)
+}
+
 function toggle_thunder() {
- 
+    if(sthunder) {
+       for(let i = 1; i < 5; ++i) $("#bolt" + i).hide()
+       sthunder = 0
+    } else {
+       $("#bolts")
+       let pre = -1
+       setInterval(function() {
+          let x = random(4)
+          $("#bolt" + x).show()
+          if(pre != -1) $("#bolt" + pre).hide()
+          pre = x
+       }, 1000);
+       sthunder = 1
+    }
 }
 
 function toggle_heavy_rain() {
-  
+    if(shrain) {
+       $(".heavyrain").css("display", "none")
+       shrain = 0
+    } else {
+       $(".heavyrain").css("display", "block")
+       shrain = 1
+    }
 }
 
 function toggle_light_rain() {
-  
+  if(slrain) {
+    $(".lightrain").css("display", "none")
+    slrain = 0
+  } else {
+    $(".lightrain").css("display", "block")
+    slrain = 1
+  }
 }
 
 function toggle_snow() {
- 
+  if(ssnow) {
+    $(".snowflake").css("display", "none")
+    ssnow = 0
+  } else {
+    $(".snowflake").css("display", "block")
+    ssnow = 1
+  }
 }
 
 function toggle_tornado() {
- 
+  
 }
 
 function toggle_clover() {
+  if(sclover) {
+    $(".clover").css("display", "none")
+    sclover = 0
+  } else {
+    $(".clover").css("display", "block")
+    sclover = 1
+  }
+}
 
+function toggle_fog() {
+  //filter: blur(0px);
+  //-webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
 }
 
 function setIcon(weather) {
@@ -124,13 +175,16 @@ function setIcon(weather) {
     case 'add_clear':
       if(hour >= 18 || hour <= 3) $(".weather .icon").html(night)
       else $(".weather .icon").html(sunny)
+      toggle_clover()
       break;
     case 'add_cloud':
       $(".weather .icon").html(cloud)
+      toggle_clover()
       break;
     case 'add_sun_cloud':
       if(hour >= 18 || hour <= 3) $(".weather .icon").html(cloudNight)
       else $(".weather .icon").html(cloudSun)
+      toggle_clover()
       break;
     case 'add_sandstorm':
       if(hour >= 18 || hour <= 3) $(".weather .icon").html(sandstormNight)
@@ -161,7 +215,7 @@ setInterval(function() {
     url: "https://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=c27e356b263e8f4724fb144ce5645f86&units=metric",
     success: function(data) {
       if(pre != data.weather[0].id) {
-        if(pre != -1) addIcon(pre)
+        addIcon(pre)
         $(".weather .cur_temp span").html(data.main.temp)
         $(".weather .description").html(data.weather[0].description)
         $(".weather .humidity").html(data.main.humidity)
