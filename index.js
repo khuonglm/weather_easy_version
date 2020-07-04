@@ -223,6 +223,7 @@ setInterval(function() {
     data: {name: name},
     url: "https://api.openweathermap.org/data/2.5/weather?q=hanoi&appid=c27e356b263e8f4724fb144ce5645f86&units=metric",
     success: function(data) {
+      $(".city").html(data.name)
       if(pre != data.weather[0].id) {
         addIcon(pre)
         $(".weather .cur_temp span").html(data.main.temp)
@@ -241,7 +242,6 @@ setInterval(function() {
   $(".date").html(dt.toLocaleString())
   if(dt.getHours() >= 18 || dt.getHours() <= 5) {
     $("body").css("background-image", "url('image/background_4.jpg')")
-    console.log('fuck')
   } else {
     $("body").css("background-image", "url('image/background_2.png')")
   }
